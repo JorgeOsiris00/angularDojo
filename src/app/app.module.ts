@@ -8,6 +8,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { TablaComponent } from './componentes/tabla/tabla.component';
 import { CardComponent } from './componentes/card/card.component';
 import { FormComponent } from './componentes/form/form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormComponent } from './componentes/form/form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
