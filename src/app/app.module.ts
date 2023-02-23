@@ -9,6 +9,10 @@ import { TablaComponent } from './componentes/tabla/tabla.component';
 import { CardComponent } from './componentes/card/card.component';
 import { FormComponent } from './componentes/form/form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TablaDojoComponent } from './componentes/tabla-dojo/tabla-dojo.component';
+import { TablaAlumnoComponent } from './componentes/tabla-alumno/tabla-alumno.component';
+import { FormDojoComponent } from './componentes/form-dojo/form-dojo.component';
+import { FormAlumnoComponent } from './componentes/form-alumno/form-alumno.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     TablaComponent,
     CardComponent,
-    FormComponent
+    FormComponent,
+    TablaDojoComponent,
+    TablaAlumnoComponent,
+    FormDojoComponent,
+    FormAlumnoComponent
   ],
   imports: [
     BrowserModule,
