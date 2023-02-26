@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {TablaComponent} from './componentes/tabla/tabla.component'; //
 import { TablaDojoComponent } from './componentes/tabla-dojo/tabla-dojo.component';
@@ -10,7 +10,8 @@ import {MenuComponent} from './componentes/menu/menu.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/tablaDojos',pathMatch: 'full'},
-  { path: 'tablaDojos', component: TablaComponent}
+  { path: 'tablaDojos', component: TablaComponent},
+  { path: 'menuComponent', component: MenuComponent},
 
 ];
 
