@@ -1,5 +1,5 @@
 export interface Dojo{
-    id: number,
+    id?: number,
     nombre: string,
     pais: string,
     domicilio: string,

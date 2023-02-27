@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { TablaDojoComponent } from './componentes/tabla-dojo/tabla-dojo.componen
 import { TablaAlumnoComponent } from './componentes/tabla-alumno/tabla-alumno.component';
 import { FormDojoComponent } from './componentes/form-dojo/form-dojo.component';
 import { FormAlumnoComponent } from './componentes/form-alumno/form-alumno.component';
+import { ContactoComponent } from './componentes/contacto/contacto.component';
+import { NoticiasComponent } from './componentes/noticias/noticias.component';
+
 
 @NgModule({
   declarations: [
@@ -22,15 +26,19 @@ import { FormAlumnoComponent } from './componentes/form-alumno/form-alumno.compo
     MenuComponent,
     FooterComponent,
     TablaComponent,
+    ContactoComponent,
     CardComponent,
     FormComponent,
-    TablaDojoComponent,
     TablaAlumnoComponent,
     FormDojoComponent,
-    FormAlumnoComponent
+    FormAlumnoComponent,
+    NoticiasComponent
+    
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    TablaDojoComponent,
     AppRoutingModule,
     NgbModule,
     AppRoutingModule,
