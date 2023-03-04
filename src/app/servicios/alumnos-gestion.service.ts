@@ -27,16 +27,15 @@ export class AlumnosGestionService {
   async getAlumno(id:string): Promise<Alumno>{
     let data:Alumno;
     try{
-      data = await lastValueFrom(this.http.get<Alumno>(this.apirestUrl+"/alumno/"+id))
+      data = await lastValueFrom(this.http.get<Alumno>(this.apirestUrl+"/alumnos/"+id))
     }catch{
       data={
-        "id": 0,
+        "_id": "",
         "nombre": "",
         "apellido": "",
         "rango": "",
         "dojo": "",
-        "codigoAlumno": "",
-        "genero": "",
+        "codigo": "",
         "categoria": "",
         "tlf": 0,
         "correo": ""
@@ -44,13 +43,21 @@ export class AlumnosGestionService {
     }
     return data;
   }
-  // maybe mirar como hacerlo con Promise
   editar(alumno:Alumno): Observable<any>{
     return this.http.put(this.apirestUrl+"/alumnos/",alumno,this.httpOptions);
   }
 
-  borrar(id:string): Observable<any>{
-    return this.http.delete(this.apirestUrl+"/alumnos/"+id);
+  getAlumnoO(id:string):Observable<Alumno>{
+    return this.http.get<Alumno>(this.apirestUrl+"/alumnos/"+id)
   }
+  createAlumnoO(alumno:Alumno):Observable<any>{
+    return this.http.post<any>(this.apirestUrl+"/alumnos",alumno,this.httpOptions)
+  }
+
+  borrar(alumno:Alumno): Observable<any>{
+    return this.http.delete(this.apirestUrl+"/alumnos/"+alumno._id);
+  }
+
+
 
 }

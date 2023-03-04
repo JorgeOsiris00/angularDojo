@@ -37,13 +37,26 @@ export class TablaDojoComponent {
     this.dojos = await this.servicioDojo.getDojos();
   }
 
-  
-
-  async eliminar(dojoEliminar:Dojo){
-    jQuery(dojoEliminar).slideDown();
-    // await this.servicioDojo.borrar(dojoEliminar.id); resolver lo del ID
-    this.refreshDojos();
+  editar(dojo:Dojo){
+    this.router.navigate(['editarDojo/'+dojo._id]);
   }
+
+  irAltaDojo(){
+    this.router.navigate(['altaDojos']);
+  }
+
+  
+  borrar(dojo:Dojo){
+    this.servicioDojo.borrar(dojo)
+                       .subscribe (respuesta=>{
+                        if (respuesta.status=="success"){
+                          alert("Dojo borrado");
+                          this.consultarDojos();
+                        } else {
+                          alert("No se ha podido borrar la fruta");
+                        }
+                       });
+                      }
 
   ordenarPorNombre(){
     this.dojos.sort((a, b) => {
@@ -52,6 +65,23 @@ export class TablaDojoComponent {
     });
     this.refreshDojos();
   }
+
+  ordenarPorPais(){
+    this.dojos.sort((a, b) => {
+      if (a.pais > b.pais) return 1
+      else return -1;
+    });
+    this.refreshDojos();
+  }
+
+  ordenarPorMaestro(){
+    this.dojos.sort((a, b) => {
+      if (a.maestro > b.maestro) return 1
+      else return -1;
+    });
+    this.refreshDojos();
+  }
+ 
 
 
   refreshDojos() {

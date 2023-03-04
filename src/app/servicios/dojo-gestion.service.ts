@@ -11,7 +11,7 @@ import {catchError,map,tap} from 'rxjs/operators';
 export class DojoGestionService {
 
   constructor( private http:HttpClient) { }
-  private apiRestUrl = 'http://localhost:1027.0.0.1/dojo' 
+  private apiRestUrl = 'http://localhost:2525' 
   // URL del proyecto Pinar tienes que poner
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-type': 'application/json'})
@@ -19,7 +19,7 @@ export class DojoGestionService {
 
   async getDojos(): Promise<Dojo[]>{
     try{
-      const dojos = await lastValueFrom(this.http.get<Dojo[]>(this.apiRestUrl+ "/apiDojo"));
+      const dojos = await lastValueFrom(this.http.get<Dojo[]>(this.apiRestUrl+ "/dojos"));
       return dojos;
     }catch{ return[];}
   }
@@ -27,16 +27,16 @@ export class DojoGestionService {
   async getDojo(id:string): Promise<Dojo>{
     let data:Dojo;
     try{
-      data = await lastValueFrom(this.http.get<Dojo>(this.apiRestUrl+"/dojo"+id))
+      data = await lastValueFrom(this.http.get<Dojo>(this.apiRestUrl+"/dojos/"+id))
     } catch{
         data ={
+          "_id":"",
           "id": 0,
           "nombre": "",
           "pais": "",
           "domicilio": "",
           "calle": "",
           "maestro": "",
-          "alumnos": "",
         }
     }
     return data;
@@ -44,17 +44,25 @@ export class DojoGestionService {
 
   async create(dojo:Dojo): Promise<any>{
     try{
-      const dojos = await lastValueFrom(this.http.post<any>(this.apiRestUrl+"/nuevoDojo",dojo,this.httpOptions));
+      const dojos = await lastValueFrom(this.http.post<any>(this.apiRestUrl+"/dojos",dojo,this.httpOptions));
       return dojos;
     }catch{
       return {"status": "error"};
     }
   }
 
-  editar(dojo:Dojo):Observable<any>{
-    return this.http.put(this.apiRestUrl + "/frutas",dojo,this.httpOptions);
+  getDojoO(id:string):Observable<Dojo>{
+    return this.http.get<Dojo>(this.apiRestUrl+"/dojos/"+id)
   }
-  borrar(id:number):Observable<any>{
-    return this.http.delete(this.apiRestUrl + "/frutas/" + id);
+
+  createDojoO(dojo:Dojo):Observable<any>{
+      return this.http.post<any>(this.apiRestUrl+"/dojos",dojo,this.httpOptions)
+  }
+
+  editar(dojo:Dojo):Observable<any>{
+    return this.http.put(this.apiRestUrl + "/dojos",dojo,this.httpOptions);
+  }
+  borrar(dojo:Dojo):Observable<any>{
+    return this.http.delete(this.apiRestUrl + "/dojos/" +dojo._id);
   }
 }

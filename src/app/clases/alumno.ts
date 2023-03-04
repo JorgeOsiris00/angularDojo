@@ -1,11 +1,10 @@
 export interface Alumno{
-    id: number,
+    _id: string,
     nombre: string,
     apellido: string,
     rango: string,
     dojo: string,
-    codigoAlumno: string,
-    genero: string,
+    codigo: string,
     categoria: string,
     tlf: number,
     correo: string

@@ -1,0 +1,36 @@
+<div class="formulario">
+    <h1>
+        {{ titulo}}
+    </h1>
+    <div class="example-container">
+        Nombre:
+        <input type="text" placeholder="xxxx" (ngModel)="dojo.nombre" required>
+    </div>
+    <div class="example-container">
+        Pais:
+        <input placeholder="xxxx.xx" (ngModel)="dojo.pais" required>
+
+    </div>
+    <div class="example-container">
+        Domicilio:
+        <input placeholder="xxxx" (ngModel)="dojo.domicilio" required>
+    </div>
+    <div class="example-container">
+        Calle;
+        <input placeholder="xxxx" (ngModel)="dojo.calle" required>
+    </div>
+    <div class="example-container">
+        Maestro:
+        <input placeholder="xxxx" (ngModel)="dojo.maestro" required>
+    </div>
+
+    <button class="btn btn-dark" (click)="darAlta()" color="primary" aria-label="icon azul">
+    Alta
+    </button>
+    <button class="btn btn-dark" (click)="editar()" color="primary" aria-label="icon azul">
+        Editar
+    </button>
+    <button class="btn btn-dark" (click)="cancelar()" color="secondary" aria-label="icon azul">
+    Cancelar
+    </button>
+</div>

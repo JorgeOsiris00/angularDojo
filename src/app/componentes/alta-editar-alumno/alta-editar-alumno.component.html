@@ -1,0 +1,54 @@
+<div class="formulario">
+    <h1>
+        {{ titulo }}
+    </h1>
+    <div class="example-container">
+        Nombre:
+        <input matInput placeholder="xxxx" (ngModel)="alumno.nombre" required>
+    </div>
+
+    <div class="example-container">
+        Pais:
+        <input matInput placeholder="xxxx.xx" (ngModel)="alumno.apellido" required>
+    </div>
+
+    <div class="example-container">
+        Domicilio:
+        <input matInput placeholder="xxxx" (ngModel)="alumno.rango" required>
+    </div>
+
+    <div class="example-container">
+        Calle:
+        <input matInput placeholder="xxxx" (ngModel)="alumno.dojo" required>
+    </div>
+
+    <div class="example-container">
+        Maestro:
+        <input matInput placeholder="xxxx" (ngModel)="alumno.codigo" required>
+    </div>
+
+    <div class="example-container">
+        Categoria:
+        <input matInput placeholder="xxxx" (ngModel)="alumno.categoria" required>
+    </div>
+
+    <div class="example-container">
+        Telefono:
+        <input matInput placeholder="xxxx" (ngModel)="alumno.tlf" required>
+    </div>
+
+    <div class="example-container">
+        Correo:
+        <input matInput placeholder="xxxx" (ngModel)="alumno.correo" required>
+    </div>
+
+    <button class="btn btn-dark" (click)="darAlta()" color="primary" aria-label="icon azul">
+    Alta
+    </button>
+    <button class="btn btn-dark" (click)="editar()" color="primary" aria-label="icon azul">
+        Editar
+    </button>
+    <button class="btn btn-dark" (click)="cancelar() " color="secondary " aria-label="icon azul ">
+    Cancelar
+    </button>
+</div>
