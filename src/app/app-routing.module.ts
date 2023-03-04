@@ -9,6 +9,8 @@ import {MenuComponent} from './componentes/menu/menu.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { NoticiasComponent } from './componentes/noticias/noticias.component';
 import { IndexComponent } from './componentes/index/index.component';
+import { AccesibilidadComponent } from './componentes/accesibilidad/accesibilidad.component';
+import { MapaComponent } from './componentes/mapa/mapa.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index',pathMatch: 'full'},
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'menuComponent', component: MenuComponent}, // creo que este no es necesario
   { path: 'contactos', component:ContactoComponent},
   { path: 'noticias', component:NoticiasComponent},
+  { path: 'accesibilidad', component:AccesibilidadComponent},
+  { path: 'mapa', component:MapaComponent}
 ];
 
 @NgModule({

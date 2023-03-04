@@ -19,6 +19,8 @@ import { NoticiasComponent } from './componentes/noticias/noticias.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IndexComponent } from './componentes/index/index.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { AccesibilidadComponent } from './componentes/accesibilidad/accesibilidad.component';
+import { MapaComponent } from './componentes/mapa/mapa.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     CardComponent,
     TablaAlumnoComponent,
     IndexComponent,
+    AccesibilidadComponent,
+    MapaComponent,
      
   ],
   imports: [
