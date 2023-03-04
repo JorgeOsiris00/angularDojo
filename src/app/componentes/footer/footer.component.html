@@ -1,1 +1,27 @@
-<p>footer works!</p>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="">
+
+        <div class="hoguera">
+            <div [@popOverState]="stateName">
+                <img src="../../../assets/gif/hoguera.gif" alt="this slowpoke moves" width="250" />
+            </div>
+            <button (click)="toggle()">Avivar la llama</button>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            <a class="navbar-brand" routerLink="/accesibilidad">Criterios de conformidad de WCAG 2.0</a> © 2023 Copyright:
+            <a class="text-white" href="https://aaa-aikido.com/">Pagina Oficial de la AAI</a
+          >
+          <p>
+            Intranet para cumplir las funciones de llevar un correcto funcionamineto de el numero de Dojos,Alumnos y noticias entre los diferentes dojos de la AAI (Asociacion Internacional de Aikido) dando la opcion de CRUD para los diferentes elementos que componen
+            los dojos de la asociacion.
+        </p>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
