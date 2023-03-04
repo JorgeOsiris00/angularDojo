@@ -17,6 +17,8 @@ import { TablaAlumnoComponent } from './componentes/tabla-alumno/tabla-alumno.co
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { NoticiasComponent } from './componentes/noticias/noticias.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IndexComponent } from './componentes/index/index.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -29,8 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactoComponent,
     CardComponent,
     TablaAlumnoComponent,
-    NoticiasComponent
-    
+    IndexComponent,
+     
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

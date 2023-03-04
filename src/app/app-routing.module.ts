@@ -8,20 +8,21 @@ import { AltaEditarDojoComponent } from './componentes/alta-editar-dojo/alta-edi
 import {MenuComponent} from './componentes/menu/menu.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { NoticiasComponent } from './componentes/noticias/noticias.component';
+import { IndexComponent } from './componentes/index/index.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/tablaDojos',pathMatch: 'full'},
+  { path: '', redirectTo: '/index',pathMatch: 'full'},
   { path: 'tablaDojos', component: TablaDojoComponent},
+  { path: 'index', component: IndexComponent},
   { path: 'tablaAlumnos', component: TablaAlumnoComponent},
   { path: 'card', component: CardComponent},
- { path: 'altaDojos', component:AltaEditarDojoComponent},
- { path: 'editarDojo/:id', component:AltaEditarDojoComponent},
- { path: 'altaAlumno', component:AltaEditarAlumnoComponent},
- { path: 'editarAlumno/:id', component:AltaEditarAlumnoComponent},
+  { path: 'altaDojos', component:AltaEditarDojoComponent},
+  { path: 'editarDojo/:id', component:AltaEditarDojoComponent},
+  { path: 'altaAlumno', component:AltaEditarAlumnoComponent},
+  { path: 'editarAlumno/:id', component:AltaEditarAlumnoComponent},
   { path: 'menuComponent', component: MenuComponent}, // creo que este no es necesario
   { path: 'contactos', component:ContactoComponent},
-  { path: 'noticias', component:NoticiasComponent}
-
+  { path: 'noticias', component:NoticiasComponent},
 ];
 
 @NgModule({
